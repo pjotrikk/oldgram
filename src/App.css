@@ -1,0 +1,90 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  max-width: 375px;
+  margin: 0;
+  border: 1px solid rgb(219, 219, 219);
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+  height: 75px;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.oldagram-logo {
+  max-height: 2em;
+}
+
+.avatar {
+  max-height: 3em;
+  background-color: green;
+  border-radius: 50%;
+}
+
+/* POST */
+p {
+  font-size: 0.8125e;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5em;
+  gap: 0.5em;
+}
+
+.post-avatar {
+  max-width: 34px;
+  max-height: 34px;
+  border-radius: 50%;
+}
+
+.name--location {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-name {
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.post-location {
+  font-size: 0.75em;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.post-post {
+  max-width: 375px;
+  max-height: 375px;
+}
+
+.bottom-container {
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.icon-holder {
+  max-height: 23px;
+  display: flex;
+  justify-content: start;
+
+  gap: 5px;
+}
+
+.icon-holder img {
+  max-height: 23px;
+}
+
+.like-counter {
+  font-weight: 700;
+}
+
+.username span {
+  font-weight: 700;
+}
