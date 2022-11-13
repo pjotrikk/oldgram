@@ -7,6 +7,8 @@ export default [
     post: "images/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
+    isLiked: false,
+    id: 1,
   },
   {
     name: "Gustave Courbet",
@@ -16,6 +18,8 @@ export default [
     post: "images/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
+    isLiked: false,
+    id: 2,
   },
   {
     name: "Joseph Ducreux",
@@ -26,5 +30,7 @@ export default [
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
+    isLiked: false,
+    id: 3,
   },
 ];

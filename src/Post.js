@@ -1,23 +1,20 @@
 import React from "react";
 import "./App.css";
 import "./data";
-import data from "./data";
-import { nanoid } from "nanoid";
 
 const Post = (props) => {
-  const [active, setActive] = React.useState(false);
   const [like, setLike] = React.useState(props.likes);
+  const [isLiked, setIsLiked] = React.useState(props.isLiked);
   const handleLike = () => {
-    setActive(!active);
+    setIsLiked(!isLiked);
+    handleCount();
   };
 
-  // React.useEffect(() => {
-  //   const likedLike = () => {
-  //     setLike((prevState) => {
-  //       return prevState + 1;
-  //     });
-  //   };
-  // });
+  const handleCount = () => {
+    if (isLiked === true) {
+      setLike(like - 1);
+    } else setLike(like + 1);
+  };
 
   return (
     <div>
@@ -34,20 +31,15 @@ const Post = (props) => {
           <img
             onClick={handleLike}
             src={
-              active ? "./images/icon-heart-red.png" : "./images/icon-heart.png"
+              isLiked
+                ? "./images/icon-heart-red.png"
+                : "./images/icon-heart.png"
             }
           />
           <img src="./images/icon-comment.png" />
           <img src="./images/icon-dm.png" />
         </div>
-        <p className="like-counter">
-          {active
-            ? () => {
-                setLike(like + 1);
-              }
-            : like}{" "}
-          likes
-        </p>
+        <p className="like-counter">{like} likes</p>
         <p className="username">
           <span>{props.username}</span> {props.comment}
         </p>

@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import Post from "./Post";
 import "./data";
 import data from "./data";
-import { nanoid } from "nanoid";
 import React from "react";
 
 function App() {
@@ -17,6 +16,8 @@ function App() {
         likes={data.likes}
         username={data.username}
         comment={data.comment}
+        isLiked={data.isLiked}
+        key={data.id}
       />
     );
   });
